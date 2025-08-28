@@ -34,6 +34,7 @@
             this.btnProdutos = new System.Windows.Forms.Button();
             this.btnCaixa = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
+            this.lblDescricao = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbltitle
@@ -41,7 +42,7 @@
             this.lbltitle.AutoSize = true;
             this.lbltitle.BackColor = System.Drawing.Color.Transparent;
             this.lbltitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltitle.Location = new System.Drawing.Point(120, 63);
+            this.lbltitle.Location = new System.Drawing.Point(121, 63);
             this.lbltitle.Name = "lbltitle";
             this.lbltitle.Size = new System.Drawing.Size(626, 42);
             this.lbltitle.TabIndex = 0;
@@ -57,6 +58,7 @@
             this.btnComandas.TabIndex = 1;
             this.btnComandas.Text = "Comandas";
             this.btnComandas.UseVisualStyleBackColor = false;
+            this.btnComandas.Click += new System.EventHandler(this.btnComandas_Click);
             // 
             // btnProdutos
             // 
@@ -91,12 +93,22 @@
             this.btnUser.Text = "Usuários";
             this.btnUser.UseVisualStyleBackColor = false;
             // 
+            // lblDescricao
+            // 
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescricao.Location = new System.Drawing.Point(522, 134);
+            this.lblDescricao.Name = "lblDescricao";
+            this.lblDescricao.Size = new System.Drawing.Size(0, 20);
+            this.lblDescricao.TabIndex = 5;
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::BakerCommerce.Properties.Resources.red;
             this.ClientSize = new System.Drawing.Size(790, 542);
+            this.Controls.Add(this.lblDescricao);
             this.Controls.Add(this.btnUser);
             this.Controls.Add(this.btnCaixa);
             this.Controls.Add(this.btnProdutos);
@@ -120,5 +132,6 @@
         private System.Windows.Forms.Button btnProdutos;
         private System.Windows.Forms.Button btnCaixa;
         private System.Windows.Forms.Button btnUser;
+        private System.Windows.Forms.Label lblDescricao;
     }
 }
