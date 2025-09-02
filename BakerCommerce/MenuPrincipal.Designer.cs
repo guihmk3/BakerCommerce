@@ -92,6 +92,7 @@
             this.btnUser.TabIndex = 4;
             this.btnUser.Text = "Usuários";
             this.btnUser.UseVisualStyleBackColor = false;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // lblDescricao
             // 

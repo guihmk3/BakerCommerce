@@ -25,5 +25,11 @@ namespace BakerCommerce
         {
 
         }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            FormUsuarios formUsuarios = new FormUsuarios(Usuario);
+            formUsuarios.ShowDialog(); // Mostar o Form
+        }
     }
 }
