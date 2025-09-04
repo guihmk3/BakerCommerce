@@ -10,11 +10,14 @@ using System.Windows.Forms;
 
 namespace BakerCommerce
 {
+   
     public partial class FormCaixa : Form
     {
-        public FormCaixa()
+        Model.Usuario usuario;
+        public FormCaixa(Model.Usuario usuario)
         {
             InitializeComponent();
+            this.usuario = usuario;
         }
     }
 }
