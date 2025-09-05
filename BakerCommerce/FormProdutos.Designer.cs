@@ -65,6 +65,7 @@
             this.dgvProdutos.Name = "dgvProdutos";
             this.dgvProdutos.Size = new System.Drawing.Size(743, 323);
             this.dgvProdutos.TabIndex = 0;
+            this.dgvProdutos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProdutos_CellContentClick);
             // 
             // grbCadastrar
             // 
@@ -90,6 +91,7 @@
             this.btnCadastrar.TabIndex = 6;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // cmbCategoriaCadastro
             // 
@@ -163,8 +165,9 @@
             this.btnCadastrarEditar.Name = "btnCadastrarEditar";
             this.btnCadastrarEditar.Size = new System.Drawing.Size(141, 26);
             this.btnCadastrarEditar.TabIndex = 6;
-            this.btnCadastrarEditar.Text = "Cadastrar";
+            this.btnCadastrarEditar.Text = "Editar";
             this.btnCadastrarEditar.UseVisualStyleBackColor = true;
+            this.btnCadastrarEditar.Click += new System.EventHandler(this.btnCadastrarEditar_Click);
             // 
             // cmbCategoriaEditar
             // 
@@ -240,6 +243,7 @@
             this.btnApagar.TabIndex = 6;
             this.btnApagar.Text = "Apagar";
             this.btnApagar.UseVisualStyleBackColor = true;
+            this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
             // 
             // lblApagarProduto
             // 

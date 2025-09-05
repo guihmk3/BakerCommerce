@@ -46,7 +46,7 @@ namespace BakerCommerce
             }
             else if (txbSenhaCadastro.Text.Length < 6)
             {
-                MessageBox.Show("O Senha deve ter no mínimo 6 caracteres.",
+                MessageBox.Show("A Senha deve ter no mínimo 6 caracteres.",
                   "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
