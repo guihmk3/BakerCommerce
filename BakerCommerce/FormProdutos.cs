@@ -196,7 +196,7 @@ namespace BakerCommerce
             }
         }
 
-        private void dgvProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvProdutos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // pegar a linha selecionada
             int Ls = dgvProdutos.SelectedCells[0].RowIndex;
