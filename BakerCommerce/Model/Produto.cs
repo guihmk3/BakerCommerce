@@ -72,15 +72,15 @@ namespace BakerCommerce.Model
         public bool Modificar()
         {
             string comando = "UPDATE produtos SET nome = @nome, " +
-                "preco = @preco, categoria = @categoria, id_respcadastro = @idrespcadastro WHERE id = @id ";
+                "preco = @preco, id_categoria = @id_categoria, id_respcadastro = @id_respcadastro WHERE id = @id ";
             Banco conexaoBD = new Banco();
             MySqlConnection con = conexaoBD.ObterConexao();
             MySqlCommand cmd = new MySqlCommand(comando, con);
 
             cmd.Parameters.AddWithValue("@nome", Nome);
             cmd.Parameters.AddWithValue("@preco", preco);
-            cmd.Parameters.AddWithValue("@categoria", IdCategoria);
-            cmd.Parameters.AddWithValue("@idrespcadastro", IdRespCadastro);
+            cmd.Parameters.AddWithValue("@id_categoria", IdCategoria);
+            cmd.Parameters.AddWithValue("@id_respcadastro", IdRespCadastro);
             cmd.Parameters.AddWithValue("@id", Id);
             cmd.Prepare();
             try

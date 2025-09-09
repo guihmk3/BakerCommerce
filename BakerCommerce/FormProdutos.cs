@@ -124,21 +124,22 @@ namespace BakerCommerce
             grbEditar.Enabled = false;
 
         }
+
         private void btnCadastrarEditar_Click(object sender, EventArgs e)
         {
-            if (txbNomeEditar.Text.Length < 3)
+            if (txbNomeEditar.Text.Length < 2)
             {
-                MessageBox.Show("O nome deve ter no mínimo 3 caracteres.",
+                MessageBox.Show("O nome deve ter no mínimo 2 caracteres.",
                     "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (txbPrecoEditar.Text.Length < 1)
+            else if (txbPrecoEditar.Text == "")
             {
-                MessageBox.Show("O Preço deve ter no mínimo 1 caracter.",
+                MessageBox.Show("nenhum valor adicionado ao preço.",
                    "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (cmbCategoriaCadastro.Text.Length < 1)
+            else if (cmbCategoriaEditar.SelectedIndex == -1)
             {
-                MessageBox.Show("A categoria deve ter no mínimo 1 caractere.",
+                MessageBox.Show("selecione uma opção na categoria.",
                   "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
@@ -147,24 +148,26 @@ namespace BakerCommerce
                 Model.Produto produtoEditar = new Model.Produto();
 
                 produtoEditar.Nome = txbNomeEditar.Text;
-                produtoEditar.preco = int.Parse(txbPrecoCadastro.Text);
+                produtoEditar.preco = int.Parse(txbPrecoEditar.Text);
 
-                string categoriaSelecionada = cmbCategoriaCadastro.Text;
+                string categoriaSelecionada = cmbCategoriaEditar.Text;
                 string[] partes = categoriaSelecionada.Split('-');
                 int idCategoria = int.Parse(partes[0]);
 
                 produtoEditar.IdCategoria = idCategoria;
                 produtoEditar.IdRespCadastro = Usuario.Id;
+                produtoEditar.Id = idselecionado;
+                
 
                 if (produtoEditar.Modificar())
                 {
-                    MessageBox.Show("Usuário modificado com sucesso", "Show!",
+                    MessageBox.Show("Produto modificado com sucesso", "Show!",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ResetarCampos();
                 }
                 else
                 {
-                    MessageBox.Show("Falha ao modificar usuário", "Erro!",
+                    MessageBox.Show("Falha ao modificar produto", "Erro!",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
