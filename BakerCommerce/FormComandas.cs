@@ -103,5 +103,10 @@ namespace BakerCommerce
             grbLancamento.Enabled = false;
             grbInformacoes.Enabled = true;    
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            ResetarCampos ();
+        }
     }
 }
