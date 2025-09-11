@@ -63,6 +63,16 @@ namespace BakerCommerce.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap codparapicturebox {
+            get {
+                object obj = ResourceManager.GetObject("codparapicturebox", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Gartoon_Team_Gartoon_Misc_Gtk_Dnd_Newspaper_1024 {
             get {
                 object obj = ResourceManager.GetObject("Gartoon-Team-Gartoon-Misc-Gtk-Dnd-Newspaper.1024", resourceCulture);
